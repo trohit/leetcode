@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/gas-station/
 # Input: gas = [1,2,3,4,5], cost = [3,4,5,1,2]
 # Output: 3
+# Runtime: 3888 ms, faster than 12.69% of Python3 online submissions for Gas Station.
+# Memory Usage: 15.2 MB, less than 30.24% of Python3 online submissions for Gas Station.
 class Solution:
     def simtrip(self, gas, cost, si)-> bool:
         g = 0
