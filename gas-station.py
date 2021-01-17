@@ -3,6 +3,8 @@
 # Output: 3
 # Runtime: 3888 ms, faster than 12.69% of Python3 online submissions for Gas Station.
 # Memory Usage: 15.2 MB, less than 30.24% of Python3 online submissions for Gas Station.
+# O(n) soln at: https://afteracademy.com/blog/gas-station-problem
+
 class Solution:
     def simtrip(self, gas, cost, si)-> bool:
         g = 0
