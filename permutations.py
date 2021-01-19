@@ -1,3 +1,10 @@
+# https://leetcode.com/problems/permutations/
+"""
+Runtime: 40 ms, faster than 71.01% of Python3 online submissions for Permutations.
+Memory Usage: 14.4 MB, less than 73.44% of Python3 online submissions for Permutations.
+time:O(n!)
+space:O(n!)
+"""
 class Solution:
     seq = []
     def __init__(self):
