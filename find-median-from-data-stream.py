@@ -1,3 +1,14 @@
+"""
+https://leetcode.com/problems/find-median-from-data-stream
+Runtime: 1424 ms, faster than 7.66% of Python3 online submissions for Find Median from Data Stream.
+Memory Usage: 25.7 MB, less than 42.30% of Python3 online submissions for Find Median from Data Stream.
+
+Time Submitted Status Runtime Memory Language
+01/26/2021 23:32	Accepted	1424 ms	25.7 MB	python3
+
+time:O(nlogn(+n)) = O(nlogn)
+space:O(n)
+"""
 class MedianFinder:
     cnt = 0
     ll = []
