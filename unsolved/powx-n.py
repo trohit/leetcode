@@ -46,3 +46,34 @@ class Solution:
             return m
         else:
             return 1/m
+
+
+'''
+a non-recursive solution but does not pass this testcase
+0.00001
+2147483647
+
+291 / 304 test cases passed.
+Time Limit Exceeded
+'''
+   print("".join(map(str,args)), **kwargs)
+    
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        # xprint(f"x:{x} n:{n}")
+        m = 1
+        is_fraction = False
+        if n < 0: is_fraction = True
+        # edge cases
+        if n == 0: return 1
+        if n == 1: return x
+        while n!=0:
+            m = m*x
+            if n>0:
+                n = n-1
+            elif n <0:
+                n = n+1
+        if is_fraction == False:
+            return m
+        else:
+            return 1/m
