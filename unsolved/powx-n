@@ -1,0 +1,26 @@
+# https://leetcode.com/problems/powx-n
+def xprint(*args, **kwargs):
+    return
+    print("".join(map(str,args)), **kwargs)
+    
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        xprint(f"x:{x} n:{n}")
+        sign = 1
+        is_neg_exp = False
+        # edge cases
+        if n == 0: return 1
+        if n == 1: return x
+        if n < 0: 
+            n *= -1
+            is_neg_exp = True
+        # if x < 0 and n%2: sign = -1
+        if is_neg_exp:
+            res = 1 / (sign * x * self.myPow(x, n-1))
+            print(f"resturning {res}")
+            return res
+        else:
+            xprint(sign)
+            return 1 * sign * x * self.myPow(x, n-1)
+            
+        
