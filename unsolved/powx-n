@@ -24,3 +24,25 @@ class Solution:
             return 1 * sign * x * self.myPow(x, n-1)
             
         
+def xprint(*args, **kwargs):
+    return
+    print("".join(map(str,args)), **kwargs)
+    
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        # xprint(f"x:{x} n:{n}")
+        m = 1
+        if n < 0: is_fraction = True
+        # edge cases
+        if n == 0: return 1
+        if n == 1: return x
+        while n!=0:
+            m = m*x
+            if n>0:
+                n = n-1
+            elif n <0:
+                n = n+1
+        if is_fraction == False:
+            return m
+        else:
+            return 1/m
