@@ -77,3 +77,31 @@ class Solution:
             return m
         else:
             return 1/m
+        
+        
+# optimal solution
+def xprint(*args, **kwargs):
+    return
+    print("".join(map(str,args)), **kwargs)
+    
+class Solution:
+    def fastPow(self, x,n):
+        if n == 0: return 1  
+        if x == 0: return 0 # only for optimization, from 36ms -> 32 ms
+        if n == 1: return x # only for optimization, from 36ms -> 32 ms
+        xprint(f"> x:{x} n:{n}")
+        half = self.fastPow(x, n//2)
+        if n%2 == 0:
+            xprint(f">> x:{x} n:{n} h:{half} even")
+            return half * half
+        else:
+            xprint(f">> x:{x} n:{n} h:{half} odd")
+            return half * half * x
+        
+    def myPow(self, x: float, n: int) -> float:
+        xprint(f"x:{x} n:{n}")
+        N = n
+        if N < 0:
+            x = 1/x
+            N=-N
+        return self.fastPow(x,N)
