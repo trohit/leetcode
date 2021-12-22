@@ -105,3 +105,39 @@ class Solution:
             x = 1/x
             N=-N
         return self.fastPow(x,N)
+
+# even faster 28 ms faster than 85%
+# builds on subdivinding into 4 instead of 2 
+# big O remains same
+def xprint(*args, **kwargs):
+    return
+    print("".join(map(str,args)), **kwargs)
+    
+class Solution:
+    def fastPow(self, x,n):
+        if n == 0: return 1
+        if x == 0: return 0
+        if n == 1: return x
+        xprint(f"> x:{x} n:{n}")
+        fourth = self.fastPow(x, n//4)
+        if n%4 == 0:
+            xprint(f">> x:{x} n:{n} h:{fourth} even")
+            return fourth * fourth * fourth * fourth
+        elif n%4 == 1:
+            xprint(f">> x:{x} n:{n} h:{fourth} odd")
+            return fourth * fourth * fourth * fourth * x
+        elif n%4 == 2:
+            xprint(f">> x:{x} n:{n} h:{fourth} 2")
+            return fourth * fourth * fourth * fourth * x * x
+        elif n%4 == 3:
+            xprint(f">> x:{x} n:{n} h:{fourth} 3")
+            return fourth * fourth * fourth * fourth * x * x * x
+            
+        
+    def myPow(self, x: float, n: int) -> float:
+        xprint(f"x:{x} n:{n}")
+        N = n
+        if N < 0:
+            x = 1/x
+            N=-N
+        return self.fastPow(x,N)    
