@@ -63,3 +63,44 @@ class Solution:
             elif reader.get(mid) == target:
                 return mid
         return -1
+       
+       
+# faster way => 40ms -> 36ms
+
+# """
+# This is ArrayReader's API interface.
+# You should not implement it, or speculate about its implementation
+# """
+#class ArrayReader:
+#    def get(self, index: int) -> int:
+
+class Solution:
+    def search(self, reader, target):
+        """
+        :type reader: ArrayReader
+        :type target: int
+        :rtype: int
+        """
+
+        """
+        so valid index from 0..2^^31-2
+        
+        valid max index : 10**4 = 
+        10001
+        2147483647
+        """
+        BAD_VAL = (2**31)-1
+        st = 0
+        end = 2
+        # faster way to compute upper limit using exponential gallop i.e. power of 2
+        while reader.get(end) != BAD_VAL:
+            end*=2
+        while st <= end:
+            mid = st + ((end - st)//2)
+            if reader.get(mid) > target:
+                end = mid - 1
+            elif reader.get(mid) < target:
+                st = mid + 1
+            elif reader.get(mid) == target:
+                return mid
+        return -1
