@@ -69,6 +69,8 @@ class Solution:
             
 '''
 Option - 3 : Uses 2 pointer method like the same method used to find intersection of linkedlists.
+Runtime: 68 ms, faster than 76.61% of Python3 online submissions for Lowest Common Ancestor of a Binary Tree III.
+Memory Usage: 18.4 MB, less than 61.73% of Python3 online submissions for Lowest Common Ancestor of a Binary Tree III.
 say len(p) = 3, len(q) = 5
 say last 2 nodes are common
 a1--------->
