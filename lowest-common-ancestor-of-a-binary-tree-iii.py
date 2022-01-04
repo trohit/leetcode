@@ -32,3 +32,33 @@ class Solution:
                 tq = tq.parent
             tp = tp.parent
         
+'''
+Better
+Runtime: 72 ms, faster than 54.26% of Python3 online submissions for Lowest Common Ancestor of a Binary Tree III.
+Memory Usage: 18.6 MB, less than 34.98% of Python3 online submissions for Lowest Common Ancestor of a Binary Tree III.
+'''
+def xprint(*args, **kwargs):
+    return
+    print("".join(map(str, args)), **kwargs)
+
+# Definition for a Node.
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+        self.parent = None
+
+class Solution:
+    def lowestCommonAncestor(self, p: 'Node', q: 'Node') -> 'Node':
+        pll = set()
+        while p != None:
+            xprint(f"{p.val}")
+            pll.add(p)
+            p = p.parent
+
+        while q != None:
+            xprint(f"{q.val}")
+            if q in pll:
+                return q
+            q = q.parent
