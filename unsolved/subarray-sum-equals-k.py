@@ -29,7 +29,7 @@ class Solution:
                     xprint("")
         return cnt                    
 '''
-Alternative approach
+Approach - 2
 Time Limit Exceeded
 61 / 89 test cases passed.
 Space: O(n)
@@ -60,3 +60,36 @@ class Solution:
                     xprint("")
         return cnt
             
+'''
+Approach - 3
+Keep start at one place.
+keep adding to sum as end pointers loops around.
+Space: O(1)
+Time : O(n^2)
+Time Limit Exceeded
+61 / 89 test cases passed.
+
+'''
+def xprint(args, **kwargs):
+    return
+    print("".join(map(str, args)), **kwargs)
+    
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        n = len(nums)
+        cnt = 0
+        # store all the sums
+        
+        for start in range(n):
+            s = 0
+            xprint("")
+            for end in range(start, n):
+                xprint(f"{start}..{end} {nums[start:end+1]} :{cnt}", end="")
+                s += nums[end]
+                if s == k:
+                    xprint(" => bump")
+                    cnt += 1
+                else:
+                    xprint("")
+        return cnt
+             
