@@ -28,3 +28,35 @@ class Solution:
                 else:
                     xprint("")
         return cnt                    
+'''
+Alternative approach
+Time Limit Exceeded
+61 / 89 test cases passed.
+Space: O(n)
+Time : O(n^2)
+'''
+def xprint(args, **kwargs):
+    # return
+    print("".join(map(str, args)), **kwargs)
+    
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        n = len(nums)
+        sll = [0] * (n+1)
+        cnt = 0
+        # store all the sums
+        for i in range(1, n+1):
+            sll[i] = sll[i - 1] + nums[i - 1]
+        # print(sll)
+        
+        for start in range(n):
+            xprint("")
+            for end in range(start+1, n+1):
+                xprint(f"{start}..{end} {sll[start:end+1]} ({sll[end]}-{sll[start]}) sum:{sll[end] - sll[start]} :{cnt}", end="")
+                if sll[end] - sll[start] == k:
+                    xprint(" => bump")
+                    cnt += 1
+                else:
+                    xprint("")
+        return cnt
+            
