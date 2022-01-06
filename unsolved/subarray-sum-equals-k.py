@@ -6,6 +6,9 @@ Space:O(1)
 Time :O(n*n*n-for-sum) = O(n^3)
 61 / 89 test cases passed.
 Time Limit Exceeded
+
+See:
+https://leetcode.com/problems/subarray-sum-equals-k/discuss/503178/Python5-Approaches-easy-to-understand-with-detailed-explanations
 """
 def xprint(args, **kwargs):
     return
