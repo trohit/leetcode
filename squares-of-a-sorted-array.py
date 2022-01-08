@@ -129,3 +129,31 @@ class Solution:
             res.extend(([x**2 for x in nums[p2:]]))
         return res
         
+
+'''
+algo as seen in LC
+Runtime: 228 ms, faster than 69.79% of Python3 online submissions for Squares of a Sorted Array.
+Memory Usage: 16.2 MB, less than 31.59% of Python3 online submissions for Squares of a Sorted Array.
+'''
+def xprint(*args, **kwargs):
+    return
+    print("".join(map(str, args)), **kwargs)
+    
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        a = [0]*n
+        l, r = 0, n - 1
+        # xprint(nums)
+        while l <= r:
+            left, right = abs(nums[l]), abs(nums[r])
+            # xprint(f"{l}..{r}:{left}<>{right}::{a}")
+            # xprint(f"{r} - {l} = {a[r-l]}")
+            if left > right:
+                a[r-l] = left * left
+                l += 1
+            else:
+                a[r-l] = right * right
+                r -= 1
+        return a
+        
