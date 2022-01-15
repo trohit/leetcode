@@ -7,6 +7,7 @@ https://www.geeksforgeeks.org/problem-binary-search-implementations/
 
 The one template for all binary search algos
 https://leetcode.com/problems/first-bad-version/discuss/769685/Python-Clear-explanation-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems.
+https://leetcode.com/list/xcrx4mxm/
 '''
 def xprint(*args, **kwargs):
     return
