@@ -15,6 +15,9 @@ Constraints:
 1 <= nums.length <= 105
 nums[i] is either 0 or 1.
 
+Space:O(1)
+Time :O(n)
+
 42 / 42 test cases passed.
 Status: Accepted
 Runtime: 352 ms
