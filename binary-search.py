@@ -5,6 +5,8 @@ https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html
 https://stackoverflow.com/questions/6372037/binary-search-problems
 https://www.geeksforgeeks.org/problem-binary-search-implementations/
 
+The one template for all binary search algos
+https://leetcode.com/problems/first-bad-version/discuss/769685/Python-Clear-explanation-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems.
 '''
 def xprint(*args, **kwargs):
     return
