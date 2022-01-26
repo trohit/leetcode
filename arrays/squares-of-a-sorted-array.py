@@ -78,3 +78,42 @@ class Solution:
             k += 1
         xprint(onums)
         return onums
+    
+    
+# better way to do it
+# squares-of-a-sorted-array.py
+def xprint(*args, **kwargs):
+    return
+    print("".join(map(str, args)), **kwargs)
+    
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        """
+        Return squares of the numbers in the list in ascending order
+        
+        : param list[int] nums: array of numbers as input
+        : return list of square of numbers in ascending order
+        """
+        n = len(nums)
+        # edge case n = 0 , 1
+        if n == 0 : return [0]
+        elif n == 1: return [nums[0]*nums[0]]
+        
+        onums = [0] * n
+        l, r = 0, n - 1
+        k = n - 1
+        while k >= 0:
+            xprint(onums)
+            abs_l = nums[l] * nums[l] 
+            abs_r = nums[r] * nums[r]
+            if abs_l > abs_r:
+                xprint(f"choosing pos {l} from nums for {k} => {abs_l}")
+                onums[k] = abs_l
+                l += 1
+            else:
+                xprint(f"choosing pos {r} from nums for {k} => {abs_r}")
+                onums[k] = abs_r
+                r -= 1
+            k -= 1
+        xprint(onums)
+        return onums
