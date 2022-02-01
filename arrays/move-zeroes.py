@@ -24,7 +24,6 @@ in loop 2 all 0s are padded at the end
 SC:O(1)
 TC:O(n)
 '''
-from collections import OrderedDict
 def xprint(*args, **kwargs):
     return
     print("".join(map(str, args)), **kwargs)
@@ -54,4 +53,27 @@ class Solution:
             
 '''
 A more elegant approach follows
+
+make a note of 
+keep a ptr to last index where non-0 num needs to be txferred
+whenever non-0 elm seens, its swapped with ptr 
+so 0's get pushed behind
+SC:O(1)
+TC:O(n)
 '''
+def xprint(*args, **kwargs):
+    return
+    print("".join(map(str, args)), **kwargs)
+    
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        n = len(nums)
+        ptr = 0
+        for i in range(n):
+            # xprint(f"{i}->[{nums[i]}] ptr:{ptr}")
+            if nums[i] != 0:
+                nums[i], nums[ptr] = nums[ptr], nums[i]
+                ptr += 1
