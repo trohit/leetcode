@@ -32,6 +32,13 @@ The size of the Set is upper bounded by the size of the string nn and the size o
 4. keep contracting left ptr and updating stats until dup chars not seen.
 5. once no dup chars, at each stage, record the max uniq len seen.
 '''
+'''
+1. keep 2 ptrs left and right, initially both start at 0
+2. keep track of how many times each char is seen
+3. keep expanding right ptr until it reaches the end of the string
+4. keep contracting left ptr and updating stats until dup chars not seen.
+5. once no dup chars, at each stage, record the max uniq len seen.
+'''
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         n, left, right, max_len = len(s), 0, 0, 0
