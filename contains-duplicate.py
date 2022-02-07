@@ -25,3 +25,17 @@ class Solution:
                 dd[nums[i]] = 1
         return False
         
+'''
+Same solution but using a set instead of a dict
+'''
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        n  = len(nums)
+        ss = set() 
+        for i in range(n):
+            if nums[i] in ss:
+                return True
+            else:
+                ss.add(nums[i])
+        return False
+        
