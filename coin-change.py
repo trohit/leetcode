@@ -53,6 +53,10 @@ class Solution:
 '''
 Classy explanation to the prob here:
 https://www.youtube.com/watch?v=H9bfqozjoqs&t=3s
+
+Details 
+Runtime: 1620 ms, faster than 72.17% of Python3 online submissions for Coin Change.
+Memory Usage: 14.3 MB, less than 47.58% of Python3 online submissions for Coin Change.
 '''
 class Solution:
     def coinChange(self, coins: 'List[int]', amount: 'int') -> 'int':
@@ -60,7 +64,7 @@ class Solution:
         dp[0] = 0
         for a in range(1, amount+1):
             for c in coins:
-                if a - c > 0:
+                if a - c >= 0:
                     tmp = min(dp[a], 1 + dp[a-c])
                     dp[a] = tmp
         return dp[amount] if dp[amount] != amount + 1 else -1
