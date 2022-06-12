@@ -60,11 +60,13 @@ Memory Usage: 14.3 MB, less than 47.58% of Python3 online submissions for Coin C
 '''
 class Solution:
     def coinChange(self, coins: 'List[int]', amount: 'int') -> 'int':
-        dp = [amount+1]*(amount + 1)
-        dp[0] = 0
+        # any value greater than amount is as good as infinite 
+        # amount + 1 elements as the 1st elem stores # of ways to get to zero.
+        dp = [amount+1]*(amount + 1) 
+        dp[0] = 0    # # of way to get to 0 is zero
         for a in range(1, amount+1):
             for c in coins:
-                if a - c >= 0:
-                    tmp = min(dp[a], 1 + dp[a-c])
+                if a - c >= 0: # as long as amount is >=0 , its a feasible soln
+                    tmp = min(dp[a], 1 + dp[a-c]) 
                     dp[a] = tmp
         return dp[amount] if dp[amount] != amount + 1 else -1
