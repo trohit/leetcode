@@ -22,5 +22,5 @@ class Solution:
             buddy_val = target - v
             if buddy_val in dd:
                 return [i,dd[buddy_val]]
-            dd[v] = i
+            dd[v] = i #store pos of the value
         
