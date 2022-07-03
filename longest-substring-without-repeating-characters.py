@@ -55,3 +55,57 @@ class Solution:
             max_len = max(max_len, right - left + 1)
             right += 1
         return max_len
+
+# *******************************************************
+'''
+# sub optimal solution put here just for comparison
+Runtime: 1241 ms, faster than 5.92% of Python3 online submissions for Longest Substring Without Repeating Characters.
+Memory Usage: 14.5 MB, less than 13.30% of Python3 online submissions for Longest Substring Without Repeating Characters.
+'''
+def pprint(*args, **kwargs):
+    # print("".join( map(str, args) ), **kwargs)
+    ...
+    
+    
+class Solution:
+    def is_dup(self, c:str, s:str, pos):
+        pprint(f"Checking for [{c}] in [{s}]")
+        for i in range(len(s)):
+            if s[i] == c:
+                pprint(f"dup detected at pos {i}->s[i]")
+                return i
+        return 0
+        
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        l = 0
+        mlen = 1 # max len seen so far
+        dd = {} #dict to store pos of every char
+        if len(s) == 0: return 0
+        print(s)
+        for k,v in enumerate(s):
+            print(k, end="")
+        print("")
+        for k,v in enumerate(s): # loop from 0->n-1
+            # del all keys not less than l
+            keys = list(dd.keys())
+            for kk,vv in enumerate(keys):
+                if dd[vv] < l:
+                    pprint(f"need to pop {vv}")
+                    dd.pop(vv)
+                    
+            pprint(f"l:{l} k:{k} [{s[l:k+1]}] m:{mlen} d:{dd}")
+            if v in dd:
+                tlen = k - l # store max len
+                pprint(f"dup detected: {v} at pos {dd[v]} tlen:{tlen}")
+                l = dd[v] + 1 # shift l to right
+                dd[v] = k
+            else:
+                dd[v] = k
+                tlen = k - l + 1
+            if tlen > mlen:
+                pprint(f"mlen:{mlen}->{tlen}")
+                mlen = tlen
+        pprint(f"l:{l} k:{k} [{s[l:k+1]}] f({s}):{mlen}")
+        return mlen
+    
+        
