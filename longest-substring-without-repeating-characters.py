@@ -109,3 +109,31 @@ class Solution:
         return mlen
     
         
+"""
+****************************************************************
+
+****************************************************************
+"""
+
+def pprint(*args, **kwargs):
+    ...
+    # print("".join(map(str, args)), **kwargs)
+    
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        n = len(s)
+        l, r, mlen = 0, 0, 0 # 2 ptrs l and r
+        chars = [0] * 128 # hash table
+        while r < n: 
+            rch = s[r]
+            pprint(f"l:{l} r:{r} [{s[l:r+1]}] max_len:{mlen}", end=" ")
+            chars[ord(rch)] += 1
+            while chars[ord(rch)] > 1:
+                lch = s[l]
+                chars[ord(lch)] -= 1
+                l += 1
+                print("push_l")
+            mlen = max(mlen, r-l+1)
+            r += 1
+            print("push_r")
+        return mlen
