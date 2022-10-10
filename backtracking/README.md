@@ -1,21 +1,18 @@
 # Backtracking
-![alt text](http://url/to/img.png)
 
-| backtracking type  | Time complexity | Comment         | Eg.             |
-| -------------------| --------------- |-----------------|-----------------| 
-| Subsets            | O(2^n)          | to choose or !  | [], [1]         |
-| Combinations       | n!/(n-k)! * n!  | no dups  nCk    | [1,2]           | 
-| Permutations       | n!              | order matters   | [1,2],[2,1]     | 
+| backtracking type  | Time complexity | Mnemonic            | Eg.             |
+| -------------------| --------------- |--------------------|-----------------| 
+| Subsets            | O(2^n)          | to choose or !     | [], [1]         |
+| Combinations       | n!/(n-k)! * n!  | n elms,k slots nCk | [1,2]           | 
+| Permutations       | n!              | factorial          | [1,2],[2,1]     | 
 
----
-Back tracking Type: Subsets
-Time Complexity: Making READMEs readable
----
-I think you can link directly to the raw version of an image if it's stored in your repository. i.e.
-
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+Menomonic poems
+Subsets are twice as powerful exponentially
+Combos are nCk
+Perms are facts
 
 ![formula](https://github.com/trohit/leetcode/blob/main/images/backtracking.PNG)
+
 ## subsets
 subsets: 2^n
 where n is the num of uniq items in the set.
