@@ -14,17 +14,14 @@ Perms are facts
 ![formula](https://github.com/trohit/leetcode/blob/main/images/backtracking.PNG)
 
 ## subsets
-subsets: 2^n
-where n is the num of uniq items in the set.
+subsets: max items 2^n where n is the num of uniq items in the set.\
+Time Complexity : O(n.2^n), as we can choose to take |take each of n elms and at the leaf node we will have 2^n items of (len n) each\
+Space Complexity: O(n), as the total mem will be the height of the tree 1->2->3
 
-at every elm, have a choice:
-to include or not to include
+at every elm, have a choice: to include or not to include
 
 Watch Neetcode video: https://neetcode.io/courses/advanced-algorithms/11
 [![Watch the subsets video](https://github.com/trohit/leetcode/blob/main/images/subsets.PNG)](https://neetcode.io/courses/advanced-algorithms/11)
-
-Time Complexity : O(n.2^n), as we can choose to take |take each of n elms and at the leaf node we will have 2^n items of (len n) each 
-Space Complexity: O(n), as the total mem will be the height of the tree 1->2->3
 
 ## combination
 ## permutation
