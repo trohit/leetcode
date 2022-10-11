@@ -47,20 +47,20 @@ def combo(letters, k):
 
 
 def helper(letters, i, sl, res, n, k, lvl = 0):
-    t = "".join(sl)
-    print(f"{' '*lvl}hlp:l:{lvl}i:{i} sl:{t}")
+    #t = "".join(sl)
+    #print(f"{' '*lvl}hlp:l:{lvl}i:{i} sl:{t}")
     # base
     if len(sl) == k:
-        print(f"{' '*lvl}>> sl:{t}")
-        #res.append(t.copy()) # deep copy needed if we dont use 't'
-        res.append(t)
+        #print(f"{' '*lvl}>> sl:{t}")
+        res.append(t.copy()) # deep copy needed if we dont use 't'
+        #res.append(t)
         return
     if i >= n:
-        print(f"{' '*lvl}!! i:{i} k:{k}n:{n}")
+        #print(f"{' '*lvl}!! i:{i} k:{k}n:{n}")
         return
     #inter
     for j in range(i, n):
-        print(f"{' '*lvl}sl.apnd {j}=>{letters[j]} sl:{sl}")
+        #print(f"{' '*lvl}sl.apnd {j}=>{letters[j]} sl:{sl}")
         sl.append(letters[j])
         helper(letters, j+1, sl, res, n, k, lvl+1)
         sl.pop()
