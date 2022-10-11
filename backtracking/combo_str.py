@@ -51,8 +51,8 @@ def helper(letters, i, sl, res, n, k, lvl = 0):
     #print(f"{' '*lvl}hlp:l:{lvl}i:{i} sl:{t}")
     # base
     if len(sl) == k:
-        #print(f"{' '*lvl}>> sl:{t}")
-        res.append(t.copy()) # deep copy needed if we dont use 't'
+        #print(f"{' '*lvl}>> sl:{sl}")
+        res.append(sl.copy()) # deep copy needed if we dont use 't'
         #res.append(t)
         return
     if i >= n:
