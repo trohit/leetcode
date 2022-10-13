@@ -32,7 +32,7 @@ def get_permutations(arr):
         for j in range(i, len(arr)):
             swap(a, i, j)
             helper(a, i+1, res, lvl+1)
-            swap(a, i, j)
+            swap(a, i, j) # unswap
 
     res = []
     helper(arr, 0, res)
