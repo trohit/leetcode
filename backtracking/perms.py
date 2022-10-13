@@ -1,4 +1,18 @@
-
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+>>> from itertools import permutations
+>>> for i in permutations([1,2,3]):
+...     print(i)
+...
+(1, 2, 3)
+(1, 3, 2)
+(2, 1, 3)
+(2, 3, 1)
+(3, 1, 2)
+(3, 2, 1)
+>>>
+"""
 def get_permutations(arr):
   
     def swap(arr, i, j):
