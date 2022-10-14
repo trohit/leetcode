@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# 46. Permutations
+# https://leetcode.com/problems/permutations
 # -*- coding: utf-8 -*-
 """
 >>> from itertools import permutations
