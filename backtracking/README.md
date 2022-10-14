@@ -4,7 +4,7 @@
 | -------------------| --------------- |--------------------|------------------------------------|-----------------------|------------------- 
 | Subsets            | O(2^n)          | to choose or !     | [], [1]                            | O(n * 2^n)            |                  |
 | Combinations       | n!/(n-k)!*k!    | n elms,k slots nCk | [1,2] and [2,1] are the same combo | O(k.2^n), O(k*C(n,k)) |                  |
-| Permutations       | n!              | factorial          | [1,2],[2,1] are diff perms         | O(n^2.n!)             |                  |
+| Permutations       | n!              | factorial          | [1,2],[2,1] are diff perms         | O(n!)                 | O(n.n!)          |
 
 Mnemonic poems to remember max items (*SCP*)
 - *Subsets are twice as powerful exponentially*
