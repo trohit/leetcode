@@ -25,6 +25,12 @@ Watch Neetcode video: https://neetcode.io/courses/advanced-algorithms/11
 
 ## Combinations
 [1,2] is the the same as [2,1] as **in combinations, order doesnt matter and no repetitions allowed .**
+T:O(C(n,k))
+S:
+
+Further Reading
+https://medium.com/enjoy-algorithm/find-all-possible-combinations-of-k-numbers-from-1-to-n-88f8e3fad33c
+
 ## Permutations
 ** Order matters and optionally repetitions allowed **
 A combination lock is actually a permutation lock.
