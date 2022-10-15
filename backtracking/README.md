@@ -24,5 +24,7 @@ Watch Neetcode video: https://neetcode.io/courses/advanced-algorithms/11
 [![Watch the subsets video](https://github.com/trohit/leetcode/blob/main/images/subsets.PNG)](https://neetcode.io/courses/advanced-algorithms/11)
 
 ## Combinations
-[1,2] is the the same as [2,1] as **in combinations, order doesnt matter.**
+[1,2] is the the same as [2,1] as **in combinations, order doesnt matter and no repetitions allowed .**
 ## Permutations
+** Order matters and optionally repetitions allowed **
+A combination lock is actually a permutation lock.
