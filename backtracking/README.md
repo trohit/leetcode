@@ -26,8 +26,8 @@ Watch Neetcode video: https://neetcode.io/courses/advanced-algorithms/11
 ## Combinations
 [1,2] is the the same as [2,1] as **in combinations, order doesnt matter and no repetitions allowed .**
 T:O(C(n,k))
-S:
 
+https://neetcode.io/courses/advanced-algorithms/12
 Further Reading
 https://medium.com/enjoy-algorithm/find-all-possible-combinations-of-k-numbers-from-1-to-n-88f8e3fad33c
 
