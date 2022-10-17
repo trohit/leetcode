@@ -8,6 +8,23 @@ Motto: To choose or skip an elm, thats the q
 
 https://leetcode.com/problems/subsets/
 
+https://stackoverflow.com/questions/1482308/how-to-get-all-subsets-of-a-set-powerset
+s, n = [1,2,3], len(s)
+Subsets-1
+for i in range(n+1):
+	it = [ combinations(s, i) ]
+	for j in it:
+		for k in j:
+			print(k)
+
+Subsets-2
+it = [ combinations(s, n) for n in range(len(s)+1) ]
+for i in it:
+     for j in i:
+             print(j)
+Subsets-3
+ss = [it for it in chain.from_iterable(combinations(s, n) for n in range(len(s)+1))]
+
 Output:
 choose elm 1
   choose elm 2
