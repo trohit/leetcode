@@ -11,6 +11,9 @@ leetcode
 #### https://github.com/maniezhilan/leetcode
 #### https://www.techinterviewhandbook.org/grind75
 
+# Patterns
+#### https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
+
 # TOLEARN
 https://leetcode.com/explore/featured/card/recursion-i/
 
