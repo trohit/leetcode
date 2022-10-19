@@ -16,6 +16,10 @@ Memory Usage: 14.3 MB, less than 10.12% of Python3 online submissions for First 
 # def isBadVersion(version: int) -> int:
 
 '''
+Approach: Special case of binary search where dup items are possible and when we find a matching elm(bad) its not enough as
+we may need to find the first bad version which could be to the right of the elm we just matched.
+So possible cases follow.
+
 Legend: 
   g for good item
   b for bad item
@@ -25,12 +29,12 @@ case 1: gbb
          ^
          m
          we dont know if 1st bad, so include m in search window
-         so, r = m
+         so, r = m instead of r = m - 1
 case 2: ggb
          ^
          m
          we know everything upto m is good, so search after m
-         l = m + 1
+         l = m + 1 just like in mormal binary search 
 when l == r: loop breaks
 as bad is guaranteed, return l or r, doesnt matter
 
