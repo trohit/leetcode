@@ -6,6 +6,11 @@ leetcode
 
 #### https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions
 
+# Solutions
+#### https://github.com/david-legend/python-algorithms
+#### https://github.com/maniezhilan/leetcode
+#### https://www.techinterviewhandbook.org/grind75
+
 # TOLEARN
 https://leetcode.com/explore/featured/card/recursion-i/
 
