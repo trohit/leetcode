@@ -25,6 +25,15 @@ nums is sorted in non-decreasing order.
 Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
 '''
 '''
+Approach:
+
+A. Brute-Force:square all elms and sort them. T:O(nlogn)  
+B. Relies on observation that all -ve elms upon squaring become in descending order.
+So we can break arr into two parts where:
+l_arr: has squares of all orig. -ve nums in descending order
+r_arr: has squares of all +ve nums in ascending order
+So we could just reverse(l_arr) and merge with r_arr
+
 have 2 ptrs p1 and p2
 [-4,-1,0,3,10]
      ^ ^
