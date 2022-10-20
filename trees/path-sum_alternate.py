@@ -10,6 +10,8 @@ https://leetcode.com/problems/path-sum/
 #         self.right = right
 
 """
+T:O(n)
+S:O(n) worst case, O(logn) best case if balanced tree
 start DFS from root until we hit leafnode.
 keep subtracting from tgt_sum along the way
 foll cases arise
