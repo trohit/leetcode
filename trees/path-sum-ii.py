@@ -39,7 +39,8 @@ approach
 case1:empty node: 0
 case2:leafnode: append path + if curr_sum == tgt_sum add to res + pop curr_elm
 case3:nested node: append path and pop curr_elm while unwinding
-T:O(n)
+T:O(n^2)
+    O(n) for traversal + O(N) for each append 
 S:O(n)
 """
 class Solution:
@@ -71,3 +72,34 @@ class Solution:
         tpath, res = [], []
         helper(root, 0, targetSum, tpath, res)
         return res
+    
+"""
+Alternate implementation
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        def h1(root, rem_sum, sl, res):
+            # case A: empty node
+            if root is None: return
+            
+            sl.append(root.val)
+            # case B: leaf node
+            if root.left is None and root.right is None:
+                if rem_sum == root.val:
+                    return res.append(sl.copy())
+                return
+            
+            # case C: mgr node
+            h1(root.left, rem_sum - root.val, sl, res)
+            h1(root.right, rem_sum - root.val, sl, res)
+            sl.pop()
+        
+        res = []
+        h1(root, targetSum, [], res)
+        return res
+"""
