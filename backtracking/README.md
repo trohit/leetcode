@@ -81,7 +81,7 @@ def combination(ll, k):
 
         for j in range(i, n):        # lazy mgr case
             sl.append(ll[j])
-            combo(ll, j+1, sl, res, n, k, lvl+1)
+            combo(ll, j+1, sl, res, n, k)
             sl.pop()
     # fn
     res = []
@@ -106,7 +106,27 @@ Time Complexity : O(n.2^n), as we can choose to take |take each of n elms and at
 Space Complexity: O(n), as the total mem will be the height of the tree 1->2->3
 
 at every elm, have a choice: to include or not to include
-
+        
 Watch Neetcode video: https://neetcode.io/courses/advanced-algorithms/11
 [![Watch the subsets video](https://github.com/trohit/leetcode/blob/main/images/subsets.PNG)](https://neetcode.io/courses/advanced-algorithms/11)
 
+
+```python
+# T:O(2^n)
+# S:O(n.2^n)
+def subsets(a):
+    def subs(a, i, sl, res):
+        if len(sl) == len(a): # base case
+            res.append(sl.copy())
+            return res
+            
+        # lazy mgr case
+        sl.append(a[i])
+        subs(a, i, sl, res)
+        sl.pop()
+
+#main
+input = "abc"
+subsets(input.split())
+print(res)
+```
