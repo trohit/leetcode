@@ -63,6 +63,31 @@ permutations(ll, 0, len(ll)-1, res)
 [1,2] is the the same as [2,1] as **in combinations, order doesnt matter and no repetitions allowed .**
 T:O(C(n,k))
 
+```python
+def combination(ll, k):
+    def combo(ll, i, sl, res, n, k):
+        if len(sl) >= k:        # base case
+            res.append(sl.copy())
+            return
+            
+        if i > n: return
+
+        for j in range(i, n):        # lazy mgr case
+            sl.append(ll[j])
+            combo(ll, j+1, sl, res, n, k, lvl+1)
+            sl.pop()
+    # fn
+    res = []
+    combo(ll, 0, [], res, len(ll), k)
+    print(len(res))
+
+# main
+import sys
+k = int(sys.argv[1])
+ll = list(range(100,106))
+combination(ll, k)
+```
+
 https://neetcode.io/courses/advanced-algorithms/12
 Further Reading
 https://medium.com/enjoy-algorithm/find-all-possible-combinations-of-k-numbers-from-1-to-n-88f8e3fad33c
