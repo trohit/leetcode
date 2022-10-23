@@ -65,7 +65,7 @@ permutations(ll, 0, len(ll)-1, res)
 [1,2] is the the same as [2,1] as **in combinations, order doesnt matter and no repetitions allowed .**
 T:O(C(n,k))
 
-![formula](https://github.com/trohit/leetcode/blob/main/images/combos.PNG)
+![combo](https://github.com/trohit/leetcode/blob/main/images/combos.PNG) "Combos")
 
 ```python
 # Brute Force method
