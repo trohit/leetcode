@@ -60,10 +60,15 @@ permutations(ll, 0, len(ll)-1, res)
 
 ------------
 ## Combinations
+### https://www.enjoyalgorithms.com/blog/find-all-combinations-of-k-numbers
+
 [1,2] is the the same as [2,1] as **in combinations, order doesnt matter and no repetitions allowed .**
 T:O(C(n,k))
 
 ```python
+# Brute Force method
+# T: O(k.2^n)
+# S: O(n.k) when k<n, time complecity lesser than this since not all n chars are used in a k combo.
 def combination(ll, k):
     def combo(ll, i, sl, res, n, k):
         if len(sl) >= k:        # base case
