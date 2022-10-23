@@ -49,3 +49,40 @@ class Solution:
         res = []
         bt(0, 0, n, [], res)
         return res
+
+"""
+Brute-force method to generate permutations
+Generates all possible combos and checks if any are valid.
+complexity os of the order of a catalan number as 
+certain exploration paths are pruned as soon as they are deemed to be invalid.
+
+def braces(n):
+    def is_valid(a):
+        bal = 0
+        for c in a:
+            if c == '(': bal += 1
+            if c == ')': bal -= 1
+            if bal < 0: return False
+        if bal == 0: return True
+        return False
+
+    def gen(n, sl, res):
+        # leaf node / base condition
+        if len(sl) == 2 * n:
+            tsl = "".join(sl)
+            res.append(tsl)
+        return # return any which ways if the length matches 2 * n
+        # mgr node
+        sl.append("(")
+        gen(n, sl, res)
+        sl.pop()
+        
+        sl.append("(")
+        gen(n, sl, res)
+        sl.pop()
+        
+    # function
+    res = []
+    gen(n, [], res)
+    return res
+"""
