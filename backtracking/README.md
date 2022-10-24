@@ -1,5 +1,22 @@
 # Backtracking
 ## https://brilliant.org/wiki/recursive-backtracking/
+## https://en.wikipedia.org/wiki/Backtracking
+
+1. Goal, Choices and Constraints
+2. root, accept, reject, first, next, output
+3. base_case|leaf_node, lazy_mgr|nested_node
+
+```python
+def backtrack(res, args):
+    if reached_goal():
+        add_soln_to_res()
+        return
+        
+    for i in range(choices):
+        make_choices(i)
+        backtrack(res, args)
+        undo_choices(i)
+```
 
 | backtracking type  | Total Number    | Mnemonic           | Eg.                                | Time Complexity       | Space Complexity |
 | -------------------| --------------- |--------------------|------------------------------------|-----------------------|------------------- 
