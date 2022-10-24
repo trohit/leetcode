@@ -138,3 +138,22 @@ a = [x for x in st]
 res = subsets(a)
 print(len(res))
 ```
+
+## Problems
+https://leetcode.com/problems/permutations/
+
+https://leetcode.com/problems/permutations-ii/
+
+
+https://leetcode.com/problems/combinations/
+
+https://leetcode.com/problems/combination-sum-ii/
+
+https://leetcode.com/problems/combination-sum-iii/
+
+
+https://leetcode.com/problems/subsets/
+
+https://leetcode.com/problems/subsets-ii/
+
+https://leetcode.com/problems/palindrome-partitioning/
