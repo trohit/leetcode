@@ -110,23 +110,31 @@ at every elm, have a choice: to include or not to include
 Watch Neetcode video: https://neetcode.io/courses/advanced-algorithms/11
 [![Watch the subsets video](https://github.com/trohit/leetcode/blob/main/images/subsets.PNG)](https://neetcode.io/courses/advanced-algorithms/11)
 
-
 ```python
 # T:O(2^n)
 # S:O(n.2^n)
 def subsets(a):
     def subs(a, i, sl, res):
-        if len(sl) == len(a): # base case
+        # base case
+        # as elm can be skipped len(st) can be < len(a)
+        if len(sl) == len(a) or i >= len(a):
             res.append(sl.copy())
-            return res
-            
+            return
+
         # lazy mgr case
         sl.append(a[i])
-        subs(a, i, sl, res)
+        subs(a, i+1, sl, res)
         sl.pop()
+        subs(a, i+1, sl, res)
 
-#main
-input = "abc"
-subsets(input.split())
-print(res)
+    res, sl = [], []
+    subs(a, 0, sl, res)
+    return res
+    
+# driver code
+import sys
+st = sys.argv[1] # "abc"
+a = [x for x in st]
+res = subsets(a)
+print(len(res))
 ```
