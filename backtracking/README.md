@@ -85,9 +85,13 @@ T:O(C(n,k))
 ![combo](https://github.com/trohit/leetcode/blob/main/images/combos.png) "Combos")
 
 ```python
-# Brute Force method
+# Optimal improved combo method
 # T: O(k.2^n)
-# S: O(n.k) when k<n, time complecity lesser than this since not all n chars are used in a k combo.
+# S: O(n.k) when k<n, time complexity lesser than this since not all n chars are used in a k combo.
+"""
+Only makes valid choices by using the j loop to kickoff from 1..n
+That way no invalid choices need to be made.
+"""
 def combination(ll, k):
     def combo(ll, i, sl, res, n, k):
         if len(sl) >= k:        # base case
@@ -110,6 +114,46 @@ import sys
 k = int(sys.argv[1])
 ll = list(range(100,106))
 combination(ll, k)
+```
+
+```python
+"""
+Simple combination implementation, using classical backtracking and no optimization
+"""
+def combo(ll:list, i:int, sl:list, res:list, k:int)->None:
+    # base case
+    if len(sl) == k:
+        # tsl = "".join(sl) # only for easier representation
+        # res.append(tsl)
+        res.append(sl.copy())
+        return
+
+    if i == len(ll):
+        return
+
+    # lazy mgr / nested node case
+    ## choose i
+    sl.append(ll[i])
+    combo(ll, i+1, sl, res, k)
+    sl.pop() # undo selection
+
+    ## do not choose i
+    combo(ll, i+1, sl, res, k)
+
+def combinations(ll, k):
+    res = []
+    combo(ll, 0, [], res, k)
+    return res
+
+# driver 
+# ./combo abcde 3
+import sys
+argc = len(sys.argv)
+ll = [c for c in sys.argv[1]]
+k = int(sys.argv[2])
+res = combinations(ll, k) # where len(ll) is n
+print(res)
+print(len(res))
 ```
 
 https://neetcode.io/courses/advanced-algorithms/12
