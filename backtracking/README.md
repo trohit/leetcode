@@ -37,22 +37,24 @@ Mnemonic poems to remember max items (*SCP*)
 ```python
 # T:O(n!)
 # S:O(n.n!)
-class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
-        def perms(a, i, res):
-            n = len(a)
-            if i == n: # base case
-                res.append(a.copy())
-                return
-            for j in range(i, n): # lazy mgr case
-                a[i], a[j] = a[j], a[i]
-                perms(a, i+1, res)
-                a[i], a[j] = a[j], a[i]
-                
-        res = []
-        perms(nums, 0, res)
-        return res
-
+#!/usr/bin/env python3
+def perms(a, l, r, res):
+    # leaf node
+    if l == r:                      # accept
+        slate = tostr(a)            
+        #res.append(a.copy())
+        res.append("".join(a))      # output
+        return
+    # lazy mgr node
+    for i in range(l, r):           # choices, first, next
+        a[i], a[l] = a[l], a[i]
+        perms(a, l+1, r, res)       
+        a[i], a[l] = a[l], a[i]     # backtrack
+#main
+s = input("enter str:")
+res, a = [], list(s)
+perms(a, 0, len(a), res)
+print(res)
 ```
 
 ```python
