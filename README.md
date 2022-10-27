@@ -8,6 +8,7 @@ leetcode
 
 #### https://iq.opengenus.org/100-interview-problems/
 
+#### https://www.enjoyalgorithms.com/data-structures-and-algorithms-course/
 
 # Solutions
 #### https://github.com/david-legend/python-algorithms
