@@ -31,6 +31,8 @@ Mnemonic poems to remember max items (*SCP*)
 
 ![formula](https://github.com/trohit/leetcode/blob/main/images/backtracking.PNG)
 
+![formula](https://github.com/trohit/leetcode/blob/main/images/perms.PNG)
+
 ## Permutations
 1. Order matters and optionally repetitions allowed 
 2. A combination lock is actually a permutation lock.
