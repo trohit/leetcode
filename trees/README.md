@@ -23,5 +23,6 @@ Types of Binary tree traversal
     - Types of BFS Traversal
        - Level order traversal: prints all nodes level by level
        - Uses a queue FIFO
+       - for lvl order traversal, maintain lvl specific qs or use a count  
        
        
