@@ -24,5 +24,12 @@ Types of Binary tree traversal
        - Level order traversal: prints all nodes level by level
        - Uses a queue FIFO
        - for lvl order traversal, maintain lvl specific qs or use a count  
-       
+- time complexity: total time taken wrt input size
+- space complexity: extra space taken wrt input size
+     
+     
+BFS level order traversal
+![formula](https://github.com/trohit/leetcode/blob/main/images/bfs_lvl_order.PNG)
+
+
        
