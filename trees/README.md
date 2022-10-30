@@ -14,6 +14,7 @@ dfs:
  - Tree with at max 2 child nodes
 Types of Binary tree traversal: DFS and BFS
 ![formula](https://github.com/trohit/leetcode/blob/main/images/bfs_versus_dfs.PNG)
+![formula](https://github.com/trohit/leetcode/blob/main/images/traversal_detail.PNG)
 
 Types of Tree Traversal
 https://en.wikipedia.org/wiki/Tree_traversal
