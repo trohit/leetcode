@@ -26,6 +26,9 @@ Types of Binary tree traversal
        - for lvl order traversal, maintain lvl specific qs or use a count  
 - time complexity: total time taken wrt input size
 - space complexity: extra space taken wrt input size
+    - input (usually not considered)
+    - auxiliary (includes stack + local vars)
+    - output (incl result arr)
      
      
 BFS level order traversal
