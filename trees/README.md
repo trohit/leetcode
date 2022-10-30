@@ -16,9 +16,9 @@ Types of Binary tree traversal
  - DFS 
     - Uses a stack LIFO
     - Types of DFS traversal
-      - pre - s, l, r
-      - in - l, s, r
-      - post - l, r, s
+      - pre - s,l,r (s)elf, (l)eft, (r)ight
+      - in - l,s,r
+      - post - l,r,s
  - BFS
     - Types of BFS Traversal
        - Level order traversal: prints all nodes level by level
@@ -29,8 +29,15 @@ Types of Binary tree traversal
     - input (usually not considered)
     - auxiliary (includes stack + local vars)
     - output (incl result arr)
-     
-     
+
+
+------------
+## DFS
+![formula](https://github.com/trohit/leetcode/blob/main/images/bfs_versus_dfs.PNG)
+
+------------
+## BFS
+
 BFS level order traversal
 ![formula](https://github.com/trohit/leetcode/blob/main/images/bfs_lvl_order.PNG)
 
