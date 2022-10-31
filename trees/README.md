@@ -97,7 +97,18 @@ class Solution:
         # driver        
         preorder(root, res)
         return res
-        
+
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        # inorder - LNR
+        res = []
+        def inorder(node):
+            if not node: return
+            inorder(node.left)
+            res.append(node.val)
+            inorder(node.right)
+        inorder(root)
+        return res
+
 ```       
 ------------
 ## BFS
