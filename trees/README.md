@@ -109,6 +109,17 @@ class Solution:
         inorder(root)
         return res
 
+    def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        res = []
+        def postOrder(node):
+            # LRN
+            if node is None: return
+            postOrder(node.left)
+            postOrder(node.right)
+            res.append(node.val)
+        postOrder(root)
+        # print(res)
+        return res
 ```       
 ------------
 ## BFS
