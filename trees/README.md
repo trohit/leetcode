@@ -22,9 +22,9 @@ https://en.wikipedia.org/wiki/Tree_traversal
     - Uses a stack LIFO
     - Types of DFS traversal
     - (N)ode, (L)eft, (R)ight
-      - pre - NLR  
-      - in - LNR
-      - post - LRN
+      - pre - NLR https://leetcode.com/problems/binary-tree-preorder-traversal/
+      - in - LNR https://leetcode.com/problems/binary-tree-inorder-traversal/
+      - post - LRN https://leetcode.com/problems/binary-tree-postorder-traversal
       - rev pre-order - NRL 
       - rev in-order - RNL
       - rev post-order - RLN
