@@ -71,6 +71,11 @@ pre(slr): *+abc
 ```
 ![formula](https://github.com/trohit/leetcode/blob/main/images/dfs_and_bfs.PNG)
 
+![formula](https://github.com/trohit/leetcode/blob/main/images/Preorder-Traversal.png)
+![formula](https://github.com/trohit/leetcode/blob/main/images/Inorder-Traversal.png)
+![formula](https://github.com/trohit/leetcode/blob/main/images/Postorder-Traversal.png)
+
+
 ## Recursive Traversal
 ```
 # Definition for a binary tree node.
