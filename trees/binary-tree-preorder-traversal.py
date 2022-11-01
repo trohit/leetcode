@@ -37,3 +37,29 @@ class Solution:
                 st.append(node.left)
         return res
         
+ """
+ # iterative implementation follows
+ 
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        # NLR
+        if root is None:
+            return []
+        st, out = [root], [] # using a list as a stack
+        while st:
+            n = st.pop()
+            # print(f"{n.val}")
+            out.append(n.val)
+            if n.right: # push left after right when we pop stack, left gets traversed first
+                  st.append(n.right)
+            if n.left:
+                  st.append(n.left)
+        return out
+        
+"""
