@@ -1,5 +1,19 @@
 # TREES
 ```
+               1
+             /   \
+            /     \
+           2       3
+          /      /   \
+         /      /     \
+        4      5       6
+              / \
+             /   \
+            7     8
+pre :NLR:12435786 # https://www.techiedelight.com/preorder-tree-traversal-iterative-recursive/
+in  :LNR:42175836 # https://www.techiedelight.com/inorder-tree-traversal-iterative-recursive/
+post:LRN:42785631 # https://www.techiedelight.com/postorder-tree-traversal-iterative-recursive/
+    '''
     A
   +-^-+
   B   C
