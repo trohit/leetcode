@@ -47,8 +47,8 @@ class Solution:
         # print(res)
         return res
 
-    """
-    # iterative impl.
+"""
+# iterative impl.
             
 def postorder_traversal(root):
     """
@@ -71,4 +71,4 @@ def postorder_traversal(root):
             st.pop()
             res.append(node.value)
     return res
-    """
+"""
