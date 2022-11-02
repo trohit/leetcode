@@ -46,3 +46,29 @@ class Solution:
         postOrder(root)
         # print(res)
         return res
+
+    """
+    # iterative impl.
+            
+def postorder_traversal(root):
+    """
+    Args:
+     root(BinaryTreeNode_int32)
+    Returns:
+     list_int32
+    """
+    # Write your code here.
+    res, st = [], [root]
+    while st:
+        node = st[-1] # peek into stack
+        if node.left:
+            st.append(node.left)
+            node.left = None
+        elif node.right:
+            st.append(node.right)
+            node.right = None
+        else:
+            st.pop()
+            res.append(node.value)
+    return res
+    """
