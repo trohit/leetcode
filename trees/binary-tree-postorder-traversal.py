@@ -49,15 +49,7 @@ class Solution:
 
 """
 # iterative impl.
-            
-def postorder_traversal(root):
-    """
-    Args:
-     root(BinaryTreeNode_int32)
-    Returns:
-     list_int32
-    """
-    # Write your code here.
+def postorder_traversal(root)->List[int]:
     res, st = [], [root]
     while st:
         node = st[-1] # peek into stack
