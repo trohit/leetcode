@@ -149,6 +149,46 @@ class Solution:
         return [] if not root else [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
 ```
 
+### Iterative
+```
+def preOrder(root) -> List[int]:# NLR
+    if root is None:return []
+    st, out = [root], [] # using a list as a stack
+    while st:
+        n = st.pop()
+        out.append(n.val)
+        # push left after right when we pop stack, left gets traversed first
+        if n.right:st.append(n.right)
+        if n.left:st.append(n.left)
+    return out
+
+def inOrder(root): #LNR
+    curr, st, res = root, [], []
+    while st or curr:
+        if curr:
+            st.append(curr)
+            curr = curr.left 
+        else:
+            curr = st.pop()
+            res.append(curr.val)
+            curr = curr.right 
+    return res
+
+def postOrder(root)->List[int]:#LRN
+    res, st = [], [root]
+    while st:
+        node = st[-1] # peek into stack
+        if node.left:
+            st.append(node.left)
+            node.left = None
+        elif node.right:
+            st.append(node.right)
+            node.right = None
+        else:
+            st.pop()
+            res.append(node.value)
+    return res
+```
 ------------
 ## BFS
 
