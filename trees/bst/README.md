@@ -4,6 +4,21 @@
 3. What as needed was a data struct that allows fast search + fast insert/del.
 4. 'fast' here means faster than 'n'.  
 
+## Uses of BST
+- Priority Queues
+- Quicksort
+- Tree Sort
+- In Btrees for fast indexed search on Primary Storage
+
+## Things to remember about BST
+- inorder traversal of BST produces ascending order
+- if balanced all ops can be O(logn)
+- types of balanced BST
+  - AVL
+  - RB Tree
+  - Splay Tree
+  - T-tree, treap, 2-3 tree, B-tree
+  
 PS: 
 All deletes implicitly involve search as well.
 ```
