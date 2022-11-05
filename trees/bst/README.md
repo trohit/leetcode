@@ -18,12 +18,9 @@ So BSTs do all ops in O(logn)
 
 # Qs
 1. Why use a Bal BST over Hash ?
-
- i. Binary Search Trees are generally memory-efficient since they do not reserve more memory than they need to.
-
- ii. On the other hand, Hash tables can be a bit more demanding if we don't know the exact number of elements we want to store.
- 
- iii. In BST we can do range searches efficiently but in Hash Table we cannot do range search efficienly.
+ - Binary Search Trees are generally memory-efficient since they do not reserve more memory than they need to.
+ - On the other hand, Hash tables can be a bit more demanding if we don't know the exact number of elements we want to store.
+ - In BST we can do range searches efficiently but in Hash Table we cannot do range search efficienly.
 
 https://www.baeldung.com/cs/hash-table-vs-balanced-binary-tree
 
@@ -32,8 +29,8 @@ https://www.baeldung.com/cs/binary-trees-vs-linked-lists-vs-hash-tables
 https://www.geeksforgeeks.org/advantages-of-bst-over-hash-table
 
 2. When to use a Bal BST ?
-When both search / modify ops need to be fast and mem efficient.
-When only search needs to be fast, and num of keys are rel fixed, can use Hash.
+- When both search / modify ops need to be fast and mem efficient.
+- When only search needs to be fast, and num of keys are rel fixed, can use Hash.
 
 So BST slower than sortedArr in search but faster than Sorted at ins/del but   
 Datastruct | SortedList| UnsortedList      | comments
@@ -50,9 +47,11 @@ insert     | O(n)      | O(n)              |
 delete     | O(n)      | O(n)              |
 
 
+# Example
+Arranged Alphabetically not VIBGYOR
+```
 Blue Green Indigo Orange Red Violet Yellow
-
-VIBGYOR
+```
 
 ```mermaid
 graph TD;
