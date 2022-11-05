@@ -11,7 +11,30 @@
 - In Btrees for fast indexed search on Primary Storage
 
 ## Things to remember about BST
+![formula](https://leetcode.com/problems/delete-node-in-a-bst/Figures/450/succ2.png)
+
 - inorder traversal of BST produces ascending order
+- Successor = "after node", i.e. the next node, or the smallest node after the current one.
+  - It's also the next node in the inorder traversal. To find a successor, go to the right once and then as many times to the left as you could.
+  ```
+  # One step right and then always left
+  def successor(root: TreeNode) -> TreeNode:
+    root = root.right
+    while root.left:
+        root = root.left
+    return root
+    ```
+- Predecessor = "before node", i.e. the previous node, or the largest node before the current one.
+  - It's also the previous node in the inorder traversal. To find a predecessor, go to the left once and then as many times to the right as you could.
+  ```
+  # One step left and then always right
+  def predecessor(root: TreeNode) -> TreeNode:
+    root = root.left
+    while root.right:
+        root = root.right
+    return root
+  ```
+
 - if balanced all ops can be O(logn)
 - types of balanced BST
   - AVL
