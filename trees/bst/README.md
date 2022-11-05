@@ -21,6 +21,7 @@ So BSTs do all ops in O(logn)
 Binary Search Trees are generally memory-efficient since they do not reserve more memory than they need to.
 On the other hand, Hash tables can be a bit more demanding if we don't know the exact number of elements we want to store.
 https://www.baeldung.com/cs/hash-table-vs-balanced-binary-tree
+https://www.baeldung.com/cs/binary-trees-vs-linked-lists-vs-hash-tables
 
 2. When to use a Bal BST ?
 When both search / modify ops need to be fast and mem efficient.
