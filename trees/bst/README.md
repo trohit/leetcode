@@ -10,9 +10,10 @@
 - Tree Sort
 - In Btrees for fast indexed search on Primary Storage
 
+![image](https://user-images.githubusercontent.com/466385/200186914-07b6b979-fe95-464c-aef0-0e3aa34346ca.png)
+
 ## Things to remember about BST
 ![formula](https://leetcode.com/problems/delete-node-in-a-bst/Figures/450/succ2.png)
-
 - inorder traversal of BST produces ascending order
 - Successor = "after node", i.e. the next node, or the smallest node after the current one.
   - It's also the next node in the inorder traversal. To find a successor, go to the right once and then as many times to the left as you could.
