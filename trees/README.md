@@ -199,15 +199,16 @@ BFS level order traversal
 
 # Related leetcode probs
 
-https://leetcode.com/problems/binary-tree-level-order-traversal/
+- https://leetcode.com/problems/binary-tree-level-order-traversal/
+- https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
+- https://leetcode.com/problems/n-ary-tree-level-order-traversal/
+- https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+- https://leetcode.com/problems/binary-tree-right-side-view/
+- https://leetcode.com/problems/path-sum/
+- https://leetcode.com/problems/path-sum-ii/
+- https://leetcode.com/problems/diameter-of-binary-tree/
+- https://leetcode.com/problems/diameter-of-n-ary-tree/
 
-https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
-       
-https://leetcode.com/problems/n-ary-tree-level-order-traversal/
-
-https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
-
-https://leetcode.com/problems/binary-tree-right-side-view/
 
 # Related links
 - https://leetcode.com/explore/learn/card/data-structure-tree/
