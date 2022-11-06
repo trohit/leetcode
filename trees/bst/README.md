@@ -169,5 +169,7 @@ graph TD;
   Violet --> Red;
   Violet --> Yellow;
 ```
+# Practice Probs
+- https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
 
 # Related Reading
