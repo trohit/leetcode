@@ -171,5 +171,6 @@ graph TD;
 ```
 # Practice Probs
 - https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+- https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 
 # Related Reading
