@@ -1,4 +1,8 @@
 # TREES
+- From graph point-of-view, a tree can also be defined as a directed acyclic graph which has N nodes and N-1 edges
+- A tree is a frequently-used data structure to simulate a hierarchical tree structure.
+  - A Binary Tree is one of the most typical tree structure. As the name suggests, a binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child.
+
 ```
                1
              /   \
@@ -90,7 +94,7 @@ pre(slr): *+abc
 ![formula](https://github.com/trohit/leetcode/blob/main/images/Postorder-Traversal.png)
 
 
-## Recursive Traversal
+## Recursive Traversal - preorder,inorder,postorder
 ```
 # Definition for a binary tree node.
 # class TreeNode:
@@ -149,8 +153,21 @@ class Solution:
         return [] if not root else [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
 ```
 
-### Iterative
+### Iterative traversal - preorder,inorder,postorder
 ```
+"""
+      1
+  +---^---+
+  2       3
++-^-+   
+4   5
+pre(slr) :12453
+in(lsr)  :42513
+post(lrs):45231
+
+- uses list as stack and 'append' to 'push' to stack
+- in stack, both push and pop happen from the same end
+"""
 def preOrder(root) -> List[int]:# NLR
     if root is None:return []
     st, out = [root], [] # using a list as a stack
