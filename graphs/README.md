@@ -3,3 +3,4 @@
 - https://leetcode.com/problems/is-graph-bipartite/
 
 - https://leetcode.com/problems/snakes-and-ladders/
+- https://leetcode.com/problems/course-schedule/
